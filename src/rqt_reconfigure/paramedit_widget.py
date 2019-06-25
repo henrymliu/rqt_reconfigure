@@ -136,7 +136,7 @@ class ParameditWidget(QWidget):
 
     def _remove_node(self, node_grn):
         try:
-            i = self._dynreconf_clients.keys().index(node_grn)
+            i = list(self._dynreconf_clients.keys()).index(node_grn)
         except ValueError:
             # ValueError occurring here means that the specified key is not
             # found, most likely already removed, which is possible in the

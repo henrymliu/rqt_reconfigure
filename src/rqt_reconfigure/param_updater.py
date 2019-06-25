@@ -58,11 +58,11 @@ class ParamUpdater(threading.Thread):
         self._reconf = reconf
         self._condition_variable = threading.Condition()
         self._configs_pending = {}
-        self._timestamp_last_pending = None
+        self._timestamp_last_pending = 0
         self._stop_flag = False
 
     def run(self):
-        _timestamp_last_commit = None
+        _timestamp_last_commit = 0
 
         rospy.logdebug(' ParamUpdater started')
 
