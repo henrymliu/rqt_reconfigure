@@ -103,7 +103,7 @@ class DynreconfClientWidget(GroupWidget):
 
             names = [name for name, v in config.items()]
             # v isn't used but necessary to get key and put it into dict.
-            rospy.logdebug('config_callback name={} v={}'.format(name, v))
+           #  rospy.logdebug('config_callback name={} v={}'.format(name, v))
 
             for widget in self.editor_widgets:
                 if isinstance(widget, EditorWidget):
